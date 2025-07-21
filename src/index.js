@@ -152,7 +152,10 @@ function Pizza({ pizzaObj }) {
         <span>
           {dollarsSign}
           {pizzaObj.soldOut
-            ? `${dollarsSign.split({ nodollarsSign })}SOLD OUT`
+            ? `${dollarsSign.replace(
+                { nodollarsSign },
+                { dollarsSign }
+              )}SOLD OUT`
             : pizzaObj.price}
         </span>
       </div>
